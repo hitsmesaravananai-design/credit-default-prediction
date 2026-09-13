@@ -1,0 +1,132 @@
+{
+  "n_rows": 30000,
+  "n_cols": 24,
+  "missing_total": 0,
+  "duplicates": 35,
+  "default_rate": 0.2212,
+  "education_undoc": 345,
+  "marriage_undoc": 54,
+  "limit_bal_median": 140000.0,
+  "limit_bal_max": 1000000.0,
+  "age_min": 21,
+  "age_max": 79,
+  "corr_default_pay1": 0.32479372847862237,
+  "corr_default_limit": -0.1535198763935072,
+  "corr_bill1_bill2": 0.9514836727518136,
+  "default_rate_by_group": {
+    "sex": {
+      "Female": 0.2078,
+      "Male": 0.2417
+    },
+    "education": {
+      "0": 0.0,
+      "1": 0.1923,
+      "2": 0.2373,
+      "3": 0.2516,
+      "4": 0.0569,
+      "5": 0.0643,
+      "6": 0.1569
+    }
+  },
+  "train_size": 24000,
+  "test_size": 6000,
+  "n_features_raw": 29,
+  "top_features": [
+    "MAX_DELAY",
+    "N_MONTHS_DELAYED",
+    "PAY_1",
+    "PAY_2",
+    "UTILIZATION"
+  ],
+  "metrics": {
+    "Logistic Regression": {
+      "cv_auc_mean": 0.7603066651450281,
+      "cv_auc_std": 0.006820554848132865,
+      "accuracy": 0.7448333333333333,
+      "precision": 0.44333333333333336,
+      "recall": 0.6013564431047476,
+      "f1": 0.5103933482571155,
+      "roc_auc": 0.7472844610229427,
+      "confusion": [
+        [
+          3671,
+          1002
+        ],
+        [
+          529,
+          798
+        ]
+      ]
+    },
+    "Random Forest": {
+      "cv_auc_mean": 0.7854095414983265,
+      "cv_auc_std": 0.005195536416504253,
+      "accuracy": 0.7711666666666667,
+      "precision": 0.48599269183922045,
+      "recall": 0.6013564431047476,
+      "f1": 0.5375547322330751,
+      "roc_auc": 0.7772878265706037,
+      "confusion": [
+        [
+          3829,
+          844
+        ],
+        [
+          529,
+          798
+        ]
+      ]
+    },
+    "Majority-class baseline": {
+      "accuracy": 0.7788333333333333,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "roc_auc": 0.5
+    }
+  },
+  "fairness": {
+    "SEX|Female": {
+      "n": 3598.0,
+      "actual_default_rate": 0.2129,
+      "flag_rate": 0.2607,
+      "recall_TPR": 0.5992,
+      "false_positive_rate": 0.1691
+    },
+    "SEX|Male": {
+      "n": 2402.0,
+      "actual_default_rate": 0.2336,
+      "flag_rate": 0.2931,
+      "recall_TPR": 0.6043,
+      "false_positive_rate": 0.1983
+    },
+    "AGE_BAND|21-30": {
+      "n": 2181.0,
+      "actual_default_rate": 0.2196,
+      "flag_rate": 0.2843,
+      "recall_TPR": 0.6326,
+      "false_positive_rate": 0.1863
+    },
+    "AGE_BAND|31-40": {
+      "n": 2105.0,
+      "actual_default_rate": 0.2095,
+      "flag_rate": 0.2618,
+      "recall_TPR": 0.5873,
+      "false_positive_rate": 0.1755
+    },
+    "AGE_BAND|41-50": {
+      "n": 1243.0,
+      "actual_default_rate": 0.2349,
+      "flag_rate": 0.2615,
+      "recall_TPR": 0.5685,
+      "false_positive_rate": 0.1672
+    },
+    "AGE_BAND|51+": {
+      "n": 471.0,
+      "actual_default_rate": 0.2442,
+      "flag_rate": 0.31,
+      "recall_TPR": 0.6087,
+      "false_positive_rate": 0.2135
+    }
+  }
+}

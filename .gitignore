@@ -1,0 +1,8 @@
+node_modules/
+__pycache__/
+*.pyc
+.venv/
+.DS_Store
+~$*.docx
+data/default_credit.zip
+outputs/cleaned_data.csv
